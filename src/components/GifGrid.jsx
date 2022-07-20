@@ -16,7 +16,7 @@ const GifGrid = ({ category }) => {
       </Loading>
       <section className="container-grid">
         {images.length > 1 &&
-          images.map((gif) => <GifCard key={gif.id} gif={gif} />)}
+          images.map((gif) => <GifCard key={gif.id} {...gif} />)}
       </section>
     </>
   );

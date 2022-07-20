@@ -19,7 +19,6 @@ const GifExpertApp = () => {
       <h4>{existCategorie}</h4>
       <AddCategory
         onNewCategory={onAddCategory}
-        categories
       />
       {categories.map((category) => (
         <GifGrid 

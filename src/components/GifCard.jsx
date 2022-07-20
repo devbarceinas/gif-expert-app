@@ -1,11 +1,11 @@
-import './GifCard.css'
+import { PropTypes } from "prop-types"
 
-const GifCard = ({ gif }) => {
-  const { id, title, image } = gif;
+import './GifCard'
 
+export const GifCard = ({ id, title, image }) => {
   return (
     <div className="container-card">
-      <img className="image-card" src={image} alt={id} />
+      <img className="image-card" src={image} alt={title} />
       <div className="card-container">
         <p>{title}</p>
       </div>
@@ -13,4 +13,7 @@ const GifCard = ({ gif }) => {
   )
 }
 
-export { GifCard }
+GifCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+}
